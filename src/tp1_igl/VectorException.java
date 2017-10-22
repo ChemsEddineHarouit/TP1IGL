@@ -17,6 +17,7 @@ public class VectorException extends Exception {
     static public String message()
     {
         String s;
+        int[] tab;
         s="Error 0x1 : Tableaux de taille differente";
         return s;
     }
