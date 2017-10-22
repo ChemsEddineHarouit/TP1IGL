@@ -5,6 +5,8 @@
  */
 package tp1_igl;
 
+import java.util.function.Function;
+
 /**
  *
  * @author Chemsou Harouit
@@ -81,5 +83,20 @@ public class VectorHelper {
         }
         
         return tableau3;
+    }
+    
+    /**
+     * Rôle: applique la fonction donnée en paramètre à tous les éléments du tableau d'entiers
+     * @param tableau
+     * @param fonction 
+     */
+    public static void appliquer(int tableau[], Function<Integer, Integer> fonction)
+    {
+        int taille=tableau.length;
+        for(int i = 0; i < taille; i++)
+        {
+            tableau[i] = fonction.apply(tableau[i]);
+        }
+        
     }
 }
