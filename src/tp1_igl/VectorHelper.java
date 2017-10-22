@@ -65,4 +65,21 @@ public class VectorHelper {
         
         return tableau3;
     }
+    
+    /**
+     * Rôle: renvoit le min et le max du tableau d'entiers
+     * @param tableau
+     * @return un tableau de dimension 2 contenant (min,max)
+     */
+    static public int[] maxAndMin(int tableau[])
+    {
+        int res[] = new int[2];
+        res[0] = res[1] = tableau[0];
+        for(int i = 1; i < tableau.length; i++)
+        {
+            if(tableau[i] >= res[0]) res[0] = tableau[i];
+            if(tableau[i] < res[1]) res[1] = tableau[i];
+        }
+        return res;
+    }
 }
