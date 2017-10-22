@@ -56,4 +56,30 @@ public class VectorHelper {
             borneSup++;borneInf--;
         }
     }
+     /**
+     * Rôle: sommer tableau1 et tableau2 dans tableau3 (entiers)
+     * @param tableau1
+     * @param tableau2
+     * @return un tableau contenant la somme de tableau1 et tableau2
+     * @throws VectorException 
+     */
+    static public int[] sommer(int tableau1[],int tableau2[]) throws VectorException
+    {
+        int tableau3[] = new int[TAILLETAB];
+        
+        if (tableau1.length==tableau2.length)
+        {
+            int taille = tableau1.length;
+            for (int i = 0; i < taille; i++) 
+            {
+                tableau3[i]=tableau1[i]+tableau2[i];
+            }
+        }
+        else
+        {
+            throw new VectorException();
+        }
+        
+        return tableau3;
+    }
 }
