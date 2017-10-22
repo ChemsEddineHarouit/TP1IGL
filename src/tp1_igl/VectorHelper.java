@@ -17,9 +17,10 @@ public class VectorHelper {
     /**
      * Rôle: Trie un tableau d'entiers
      * @param tableau 
+     * @return tableau apres tri
      */
     
-    static public void trier(int tableau[])
+    static public int[] trier(int tableau[])
     {
         int taille=tableau.length;
         boolean changed=true;
@@ -38,14 +39,16 @@ public class VectorHelper {
             }
         }
         
+        return tableau;
                
     }
     
     /**
      * Rôle: inverse les éléments du tableau d'entiers
      * @param tableau 
+     * @return nouveau tableau apres modification
      */
-    static public void inverser(int tableau[])
+    static public int[] inverser(int tableau[])
     {
         int taille=tableau.length;
         int borneSup=taille,borneInf=0;
@@ -57,6 +60,8 @@ public class VectorHelper {
             
             borneSup++;borneInf--;
         }
+        
+        return tableau;
     }
      /**
      * Rôle: sommer tableau1 et tableau2 dans tableau3 (entiers)
@@ -89,17 +94,19 @@ public class VectorHelper {
      * Rôle: applique la fonction donnée en paramètre à tous les éléments du tableau d'entiers
      * @param tableau
      * @param fonction 
+     * @return tableau apres application de la fonction
      */
-    public static void appliquer(int tableau[], Function<Integer, Integer> fonction)
+    public static int[] appliquer(int tableau[], Function<Integer, Integer> fonction)
     {
         int taille=tableau.length;
         for(int i = 0; i < taille; i++)
         {
             tableau[i] = fonction.apply(tableau[i]);
         }
-        
+        return tableau;
     }
-    /*
+    
+    /**
      * Rôle: renvoit le min et le max du tableau d'entiers
      * @param tableau
      * @return un tableau de dimension 2 contenant (min,max)
