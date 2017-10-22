@@ -38,4 +38,22 @@ public class VectorHelper {
         
                
     }
+    
+    /**
+     * Rôle: inverse les éléments du tableau d'entiers
+     * @param tableau 
+     */
+    static public void inverser(int tableau[])
+    {
+        int taille=tableau.length;
+        int borneSup=taille,borneInf=0;
+        while(borneSup>borneInf)
+        {
+            int temp=tableau[borneSup];
+            tableau[borneSup]=tableau[borneInf];
+            tableau[borneInf]=temp;
+            
+            borneSup++;borneInf--;
+        }
+    }
 }
