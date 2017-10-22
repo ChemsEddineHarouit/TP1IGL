@@ -43,11 +43,11 @@ public class VectorExceptionTest {
     @Test
     public void testMessage() {
         System.out.println("message");
-        String expResult = "";
+        String expResult = "Error 0x1 : Tableaux de taille differente";
         String result = VectorException.message();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }

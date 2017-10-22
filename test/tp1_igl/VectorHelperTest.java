@@ -44,12 +44,12 @@ public class VectorHelperTest {
     @Test
     public void testTrier() {
         System.out.println("trier");
-        int[] tableau = null;
-        int[] expResult = null;
+        int[] tableau = {50,112,32,-5};
+        int[] expResult = {-5,32,50,112};
         int[] result = VectorHelper.trier(tableau);
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -58,12 +58,12 @@ public class VectorHelperTest {
     @Test
     public void testInverser() {
         System.out.println("inverser");
-        int[] tableau = null;
-        int[] expResult = null;
+        int[] tableau = {50,112,32,-5};
+        int[] expResult = {-5,32,112,50};
         int[] result = VectorHelper.inverser(tableau);
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -72,13 +72,13 @@ public class VectorHelperTest {
     @Test
     public void testSommer() throws Exception {
         System.out.println("sommer");
-        int[] tableau1 = null;
-        int[] tableau2 = null;
-        int[] expResult = null;
+        int[] tableau1 = {50,112,32,-5};
+        int[] tableau2 = {52,113,31,3};
+        int[] expResult = {102,225,63,-2};
         int[] result = VectorHelper.sommer(tableau1, tableau2);
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -87,13 +87,13 @@ public class VectorHelperTest {
     @Test
     public void testAppliquer() {
         System.out.println("appliquer");
-        int[] tableau = null;
-        Function<Integer, Integer> fonction = null;
-        int[] expResult = null;
+        int[] tableau = {50,112,32,-5};
+        Function<Integer, Integer> fonction = x->x*2;
+        int[] expResult = {100,224,64,-10};
         int[] result = VectorHelper.appliquer(tableau, fonction);
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -102,12 +102,12 @@ public class VectorHelperTest {
     @Test
     public void testMaxAndMin() {
         System.out.println("maxAndMin");
-        int[] tableau = null;
-        int[] expResult = null;
+        int[] tableau = {50,112,32,-5};
+        int[] expResult = {112,-5};
         int[] result = VectorHelper.maxAndMin(tableau);
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }

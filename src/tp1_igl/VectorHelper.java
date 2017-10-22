@@ -27,7 +27,7 @@ public class VectorHelper {
         while(changed==true)
         {
             changed=false;
-            for (int i = 0; i < taille; i++) 
+            for (int i = 0; i < taille-1; i++) 
             {
                 if (tableau[i]>tableau[i+1])
                 {
@@ -51,14 +51,14 @@ public class VectorHelper {
     static public int[] inverser(int tableau[])
     {
         int taille=tableau.length;
-        int borneSup=taille,borneInf=0;
+        int borneSup=taille-1,borneInf=0;
         while(borneSup>borneInf)
         {
             int temp=tableau[borneSup];
             tableau[borneSup]=tableau[borneInf];
             tableau[borneInf]=temp;
             
-            borneSup++;borneInf--;
+            borneSup--;borneInf++;
         }
         
         return tableau;
@@ -72,7 +72,7 @@ public class VectorHelper {
      */
     static public int[] sommer(int tableau1[],int tableau2[]) throws VectorException
     {
-        int tableau3[] = new int[TAILLETAB];
+        int tableau3[] = new int[tableau1.length];
         
         if (tableau1.length==tableau2.length)
         {
@@ -115,7 +115,8 @@ public class VectorHelper {
     {
         int res[] = new int[2];
         res[0] = res[1] = tableau[0];
-        for(int i = 1; i < tableau.length; i++)
+        int taille=tableau.length;
+        for(int i = 1; i < taille; i++)
         {
             if(tableau[i] >= res[0]) res[0] = tableau[i];
             if(tableau[i] < res[1]) res[1] = tableau[i];
