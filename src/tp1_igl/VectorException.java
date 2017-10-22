@@ -11,13 +11,13 @@ package tp1_igl;
  */
 public class VectorException extends Exception {
     /**
-     * 
-     * @return 
+     * Exception message
+     * @return a string describing the error Message
      */
     static public String message()
     {
         String s;
-        s="Tableaux de taille differente";
+        s="Error 0x1 : Tableaux de taille differente";
         return s;
     }
 }
